@@ -204,15 +204,7 @@
                         results.push([data[i][0], answer]);
                     }
 
-                    var string = 'y = ';
-
-                    for(var i = equation.length-1; i >= 0; i--){
-                      if(i > 1) string += Math.round(equation[i] * Math.pow(10, i)) / Math.pow(10, i)  + 'x^' + i + ' + ';
-                      else if (i == 1) string += Math.round(equation[i]*100) / 100 + 'x' + ' + ';
-                      else string += Math.round(equation[i]*100) / 100;
-                    }
-
-                return {equation: equation, points: results, string: string};
+                return {equation: equation, points: results};
             },
 
             lastvalue: function(data) {
